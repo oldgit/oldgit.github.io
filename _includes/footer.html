@@ -2,18 +2,10 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
+        <ul class="footer-list">
           <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-2">
-        <ul class="social-media-list">
           {% if site.github_username %}
           <li>
             <a href="https://github.com/{{ site.github_username }}">
@@ -44,9 +36,17 @@
           {% endif %}
         </ul>
       </div>
-
+      <div class="footer-col  footer-col-2">
+        <ul class="footer-list">
+          <li>{{ site.description }}</li>
+        </ul>
+      </div>
       <div class="footer-col  footer-col-3">
-        <p class="text">{{ site.description }}</p>
+        <ul class="footer-list">
+          <li class="footer-image">
+            <img class="avatar" src="https://www.gravatar.com/avatar/b44743627803342f05149e5921e721f6"/>
+          </li>
+        </ul>
       </div>
     </div>
 
