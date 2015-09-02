@@ -2,10 +2,9 @@
 layout: post
 title: Wildcard DNS with xip.io for web application testing
 date: 2015-08-31 15:55:04
-categories: [ops]
+category: ops
 tags: [ops, DNS, testing, tablet, phone, apache, nginx]
 ---
-
 If you need to test a web application on smart phones and tablets,
 xip.io's wildcard DNS can help. Using **[xip.io](http://xip.io/)** you can access an application
 running on a local IP address, say: `192.168.1.10` with `http://192.168.1.10.xip.io` (or any
