@@ -20,6 +20,7 @@ If you use nginx and are serving a sub directory: `foo` from your www directory,
 {% gist oldgit/7de7492a3942fe9f631c nginx.xip.io.conf %}
 
 If you are using Apache, you can make an entry to your `httpd-vhosts.conf` file:
+
 {% highlight apache %}
 ServerAlias foo.*.xip.io
 {% endhighlight %}
