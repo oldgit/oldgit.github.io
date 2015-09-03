@@ -38,7 +38,7 @@ Ssh in as `root` and edit the `/etc/passwd` entry for your new user back to an `
 * Delete to the end of line: `d$`
 * Add the ash entry: `a:/bin/ash`, hit ESC key
 * Save the file: `:wq`
-* Exit out of the Diskstation: `exit`
+* Exit out of Diskstation: `exit`
 * SSH in as your new user: `ssh gituser@diskstation.local`
 * Create a new directory for your git projects: `mkdir git`
 
@@ -52,10 +52,10 @@ Once a bare git repo is initialised, you can start using git:
 
 {% gist oldgit/7c489531d79a19c578c2 createProject.sh %}
 
-* Make it executable: `chmod +x creatProject.sh`
-* Make a new git repo, say `test` with: `./createProject.sh test`
+* Make it executable: `chmod +x createProject.sh`
+* Make a new git repo, say *test* with: `./createProject.sh test`
 * The script will warn you if a repo with the same name exists & list all git repos, so you can choose a unique name
-* Once created, exit: `exit`
+* Once created, exit out of Diskstation: `exit`
 
 ## Clone your new bare git repo
 
@@ -82,3 +82,39 @@ See [Matt Heimer's great post](http://blog.osdev.org/git/2014/02/13/using-git-on
 **However**, I didn't need to edit `/etc/ssh/sshd_config` - I did ensure that
 the `.ssh` directory and `authorized_keys` had only user `'rw'` permissions.
 Also he thoroughly explains the *WebDAV* way to use git on your NAS.
+
+## Creating new git repos straight from your client
+
+As you have a decent ssh login as `gituser` to the NAS, it's easy to remotely call: `createProject.sh`.
+So if you just wanted to see a list of git repos on the NAS from your client:
+
+{% highlight text %}
+$ ssh gituser@diskstation.local "cd git; ./createProject.sh test"
+test.git already exists!
+Please use a name not in this list:
+euler.git
+test.git
+{% endhighlight %}
+
+So let's create a `test2` git repo on the NAS:
+
+{% highlight text %}
+$ ssh gituser@diskstation.local "cd git; ./createProject.sh test2"
+Initialized empty shared Git repository in /volume1/homes/gituser/git/test2.git/
+euler.git
+test.git
+test2.git
+Created git project: test2.git
+{% endhighlight %}
+
+If you are doing this often, add a function in your `bash` or `zsh` rc file:
+
+{% highlight bash %}
+function createNASgit() {
+  if [ $# -eq 1 ]; then
+    ssh gituser@diskstation.local "cd git; ./createProject.sh $1"
+  fi
+}
+{% endhighlight %}
+
+Now you can just run: `createNASgit test`
