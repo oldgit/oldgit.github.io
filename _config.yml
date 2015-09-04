@@ -1,8 +1,7 @@
 # Site settings
 title: Adventures in Code
 email: jon.harvey@agilefactory.co.uk
-description: > # this means to ignore newlines until "baseurl:"
-  Jon's blog on technology, design & code craft.
+description: Jon's blog on technology, design & code craft.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://oldgit.github.io" # the base hostname & protocol for your site
 twitter_username: seasidejon
