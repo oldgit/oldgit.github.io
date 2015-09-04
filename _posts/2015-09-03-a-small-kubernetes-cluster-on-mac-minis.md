@@ -2,6 +2,7 @@
 layout: post
 title: A small Kubernetes cluster on mac minis
 date: 2015-09-03 18:51:39
+published: False
 category: ops
 tags: [ops, kubernetes, coreos, docker]
 ---
