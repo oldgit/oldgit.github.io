@@ -2,29 +2,29 @@
 layout: default
 ---
 <div class="post">
-          <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}
-            {% if page.category %} • Category: <a href="/categories/#{{ page.category }}">{{ page.category }}</a>{% endif %}
-            {% if page.tags %} • Tags: {% assign sortedtags = page.tags | sort %} {% for tag in sortedtags %}
-              <a href="/tags/#{{ tag }}">{{ tag }}</a> {% endfor %} {% endif %}
-            {% if page.author %} • {{ page.author }}{% endif %}
-            {% if page.meta %} • {{ page.meta }}{% endif %}
-            </p>
-          </header>
-          <article class="post-content">
+           <header class="post-header">
+             <h1 class="post-title">{{ page.title }}</h1>
+             <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}
+             {% if page.category %} • Category: <a href="/categories/#{{ page.category }}">{{ page.category }}</a>{% endif %}
+             {% if page.tags %} • Tags: {% assign sortedtags = page.tags | sort %} {% for tag in sortedtags %}
+               <a href="/tags/#{{ tag }}">{{ tag }}</a> {% endfor %} {% endif %}
+             {% if page.author %} • {{ page.author }}{% endif %}
+             {% if page.meta %} • {{ page.meta }}{% endif %}
+             </p>
+           </header>
+           <article class="post-content">
 
-            {{ content }}
-          </article>
-       <footer>
-         <div id="comments"></div>
-         <script>
-           gapi.comments.render('comments', {
-             href: window.location,
-             width: '740',
-             first_party_property: 'BLOGGER',
-             view_type: 'FILTERED_POSTMOD'
-           });
-         </script>
-       </footer>
-       </div> <!-- post -->
+             {{ content }}
+           </article>
+           <footer>
+             <div id="comments"></div>
+             <script>
+               gapi.comments.render('comments', {
+                 href: window.location,
+                 width: '740',
+                 first_party_property: 'BLOGGER',
+                 view_type: 'FILTERED_POSTMOD'
+               });
+             </script>
+           </footer>
+         </div> <!-- post -->
