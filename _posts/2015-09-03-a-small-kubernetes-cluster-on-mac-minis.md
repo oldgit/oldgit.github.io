@@ -29,14 +29,8 @@ Run example
 
 ## Node CPU and memory usage
 
-Kubernetes uses loats of memory and CPU polling the cluster
+Kubernetes uses lots of memory and CPU polling the cluster
 
 ## Conclusions
 
-Not ready for release - still in beta...
-
-
-
-
-
-
+Not ready for release - still in beta.
