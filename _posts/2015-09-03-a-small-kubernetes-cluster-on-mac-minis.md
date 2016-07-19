@@ -6,4 +6,29 @@ published: False
 category: ops
 tags: [ops, kubernetes, coreos, docker]
 ---
-Notes on setting up a small kubernetes cluster on 2 mac minis
+[Docker](http://www.docker.com) containers are a good way to run software services.
+[CoreOS](http://www.coreos.com) is sold as good OS to run docker and [Kubernetes](http://www.kubernetes.com) 
+can deploy and manage services on CoreOS nodes.
+This post describes setting up a small CoreOS cluster of 2 mac minis with kubernetes and docker.
+
+## Install CoreOS on a bare metal PC
+
+Firstly, burn the latest CoreOS iso to a CDROM. Next boot the mac mini using the CDROM.
+
+Use the cloud-config
+
+Add kube-serviceaccount key to home directory
+
+## DNS setup: Add kube-dns replication controller & service 
+
+
+## Run example
+
+## Node CPU and memory usage
+
+## Conclusions
+
+
+
+
+
