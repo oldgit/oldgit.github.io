@@ -21,12 +21,20 @@ Add kube-serviceaccount key to home directory
 
 ## DNS setup: Add kube-dns replication controller & service 
 
+Do dns setup.
 
 ## Run example
 
+Run example
+
 ## Node CPU and memory usage
 
+Kubernetes uses loats of memory and CPU polling the cluster
+
 ## Conclusions
+
+Not ready for release - still in beta...
+
 
 
 
