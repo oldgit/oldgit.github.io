@@ -6,6 +6,15 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://oldgit.github.io" # the base hostname & protocol for your site
 twitter_username: seasidejon
 github_username:  oldgit
-google_username: JonHarveyUk
 # Build settings
 markdown: kramdown
+plugins:
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
